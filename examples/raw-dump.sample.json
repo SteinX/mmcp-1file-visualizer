@@ -1,0 +1,57 @@
+{
+  "memories": [
+    {
+      "id": "memories:1",
+      "content": "User prefers Rust for backend services",
+      "memory_type": "semantic",
+      "event_time": "2026-03-19T10:00:00Z",
+      "ingestion_time": "2026-03-19T10:00:01Z"
+    },
+    {
+      "id": "memories:2",
+      "content": "Project uses OAuth2 login flow",
+      "memory_type": "semantic",
+      "event_time": "2026-03-19T10:01:00Z",
+      "ingestion_time": "2026-03-19T10:01:01Z"
+    }
+  ],
+  "entities": [
+    {
+      "id": "entities:rust",
+      "name": "Rust",
+      "entity_type": "technology",
+      "description": "Systems language"
+    },
+    {
+      "id": "entities:oauth",
+      "name": "OAuth2",
+      "entity_type": "protocol",
+      "description": "Authorization protocol"
+    }
+  ],
+  "relations": [
+    {
+      "id": "relations:1",
+      "in": "entities:oauth",
+      "out": "entities:rust",
+      "relation_type": "related_to"
+    }
+  ],
+  "code_symbols": [
+    {
+      "id": "code_symbols:auth_fn",
+      "name": "authorize",
+      "symbol_type": "function",
+      "file_path": "src/auth.rs",
+      "project_id": "demo"
+    }
+  ],
+  "symbol_relation": [
+    {
+      "id": "symbol_relation:1",
+      "in": "code_symbols:auth_fn",
+      "out": "entities:oauth",
+      "relation_type": "uses"
+    }
+  ]
+}

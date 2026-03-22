@@ -1,0 +1,47 @@
+{
+  "name": "mmgraph",
+  "version": "0.1.0",
+  "description": "CLI + WebUI graph visualizer for memory-mcp-1file data",
+  "type": "module",
+  "bin": {
+    "mmgraph": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:web": "vite build --config frontend/vite.config.ts",
+    "build:all": "npm run build && npm run build:web",
+    "dev": "tsx src/cli.ts",
+    "dev:web": "vite --config frontend/vite.config.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/cli.js"
+  },
+  "keywords": [
+    "mcp",
+    "memory-mcp-1file",
+    "graph",
+    "visualization",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.1",
+    "express": "^5.1.0",
+    "graphology": "^0.26.0",
+    "open": "^10.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sigma": "^3.0.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.8",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}
